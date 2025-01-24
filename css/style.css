@@ -29,6 +29,13 @@ section h1{
     transition: .8s;
 }
 
+#nav{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; 
+}
+
 /* End NavBar */
 
 
