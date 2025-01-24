@@ -40,6 +40,12 @@
         padding-right: 30px !important;
         margin-top: 20px;
     }
+
+    .col-lg-10.col-md-12.mt-3 {
+        display: contents;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width : 576px) {
