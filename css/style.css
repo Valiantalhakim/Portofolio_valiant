@@ -65,6 +65,12 @@ section h1{
     font-weight: 300;
 }
 
+#hero .hero-photo {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 50px;
+}
+
     /* call to action */
 .btn-custom1{
     background-color: var(--acsentColor);
@@ -86,14 +92,33 @@ section h1{
     font-size: 1.1rem;
 }
 
-.social-icon svg {
-    margin-right: .7em;
-    margin-bottom: 10px;
+.social-icon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
 }
 
-.social-icon img{
-    margin-right: .7em;
-    margin-bottom: 10px;
+.social-icon svg,
+.social-icon img {
+    margin: 0;
+}
+
+#hero .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#hero .social-icon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+#hero .social-icon svg {
+    margin: 0;
 }
 
 .social-icon-footer svg, img{
@@ -125,6 +150,23 @@ hr{
 
 /* end about */
 
+/* education */
+#education .education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+#education .education-card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+}
+/* end education */
+
 /* skill */
 
 #skill{
@@ -145,6 +187,42 @@ hr{
 
 #skill .card:hover{
     background-color: var(--acsentColor);
+}
+
+#skill .skill-card {
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+#skill .skill-card.is-expanded {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#skill .skill-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+#skill .skill-card {
+    position: relative;
+    overflow: hidden;
+}
+
+#skill .skill-card .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+#skill .internship-logo {
+    width: 120px;
+    max-width: 120px;
+    height: auto;
 }
 
 #skill h3{
@@ -178,6 +256,11 @@ hr{
 #sertifikat img{
     width: 100%;
     padding: 10px;
+}
+#sertifikat .cert-image {
+    width: min(45%, 420px);
+    height: auto;
+    object-fit: contain;
 }
 /* end sertifikat */
 
@@ -249,6 +332,17 @@ hr{
     color: white;
     font-size: 20px;
     padding: 10px;
+}
+
+#modalLink {
+    display: none;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+#modalLink.is-visible {
+    display: block;
+    width: fit-content;
 }
 
 /* Close Button */

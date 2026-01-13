@@ -15,8 +15,8 @@
     }
 
     .social-icon{
-        left: 50%;
-        transform: translate(-50%);
+        left: auto;
+        transform: none;
     }
 
     #hero .row {
@@ -25,6 +25,10 @@
 
     .btn-custom1{
         width: 80%;
+    }
+
+    #hero .social-icon {
+        justify-content: center;
     }
 
     #about p{
@@ -41,10 +45,11 @@
         margin-top: 20px;
     }
 
-    .col-lg-10.col-md-12.mt-3 {
-        display: contents;
+    #skill .skill-icons {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        text-align: center;
+        gap: 10px;
     }
 }
 
@@ -71,6 +76,52 @@
     flex-direction: column;
 }
 
+}
+
+@media screen and (min-width: 401px) {
+    #hero .social-icon {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #hero h1,
+    #hero h2 {
+        font-size: 1.6rem;
+    }
+
+    #hero p {
+        font-size: .85rem;
+    }
+
+    .btn-custom1 {
+        font-size: .95rem;
+        height: auto;
+        padding: 10px 12px;
+    }
+
+    #hero .social-icon {
+        position: static !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin-top: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #hero .row {
+        padding-bottom: 20px;
+    }
+
+    #skill img {
+        width: 22%;
+    }
+
+    #sertifikat .cert-image {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 
