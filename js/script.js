@@ -39,6 +39,12 @@ document.querySelectorAll('#education .education-card').forEach(function (card) 
     });
 });
 
+document.querySelectorAll('#education .edu-download').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+});
+
 
 
 const modal = document.getElementById('imageModal');
