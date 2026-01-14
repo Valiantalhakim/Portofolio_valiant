@@ -24,6 +24,21 @@ document.querySelectorAll('#skill .skill-card').forEach(function (card) {
     });
 });
 
+document.querySelectorAll('#education .education-card').forEach(function (card) {
+    function toggleCard() {
+        card.classList.toggle('is-expanded');
+        card.setAttribute('aria-expanded', card.classList.contains('is-expanded'));
+    }
+
+    card.addEventListener('click', toggleCard);
+    card.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleCard();
+        }
+    });
+});
+
 
 
 const modal = document.getElementById('imageModal');
